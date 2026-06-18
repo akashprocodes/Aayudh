@@ -8,4 +8,5 @@ export interface Podcast {
   publishedAt: string;
   host: string;
   description?: string;
+  videoUrl?: string;
 }

@@ -15,7 +15,7 @@ export const EntertainmentSection: React.FC<EntertainmentSectionProps> = ({ arti
       <SectionHeading title="मनोरंजन" accentColor="navy" />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {articles.slice(0, 3).map((art) => (
-          <ArticleCard key={art.id} article={art} layout="vertical" />
+          <ArticleCard key={art.id} article={art} layout="vertical" variant="simple" />
         ))}
       </div>
     </section>

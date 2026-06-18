@@ -12,10 +12,10 @@ interface VideoCardProps {
 export const VideoCard: React.FC<VideoCardProps> = ({ video, className }) => {
   return (
     <Link href={`/videos?slug=${video.slug}`} className={cn("block", className)}>
-      <div className="flex gap-3 items-center group cursor-pointer hover:bg-slate-50/80 p-2 rounded-lg transition-all duration-200">
+      <div className="flex gap-2.5 items-center group cursor-pointer hover:bg-slate-50/80 p-1.5 rounded-lg transition-all duration-200">
         
         {/* Thumbnail with play icon */}
-        <div className="relative w-24 h-16 bg-slate-100 rounded-lg overflow-hidden shrink-0 flex items-center justify-center border border-slate-150">
+        <div className="relative w-[88px] h-[60px] bg-slate-100 rounded-lg overflow-hidden shrink-0 flex items-center justify-center border border-slate-150">
           <img
             src={video.thumbnail}
             alt={video.title}
@@ -37,6 +37,11 @@ export const VideoCard: React.FC<VideoCardProps> = ({ video, className }) => {
           <h4 className="text-xs font-bold text-slate-800 leading-snug line-clamp-2 group-hover:text-brand-purple transition-colors duration-200">
             {video.title}
           </h4>
+          {video.description && (
+            <p className="mt-1 text-[10px] text-slate-500 line-clamp-1">
+              {video.description}
+            </p>
+          )}
           <div className="flex items-center gap-1.5 text-[9px] text-slate-400 mt-1 font-semibold">
             <span>{video.publishedAt}</span>
             {video.views && (

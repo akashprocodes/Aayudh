@@ -62,16 +62,10 @@ export default function HomePage() {
 
       {/* 4. Video, Podcast, and Explainer Grid Row */}
       <section className="py-8 border-b border-slate-100">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-          <div>
-            <VideosSection videos={otherVideos} />
-          </div>
-          <div>
-            <PodcastSection podcasts={podcasts || []} />
-          </div>
-          <div>
-            <ExplainerSection videos={explainerVideos} />
-          </div>
+        <div className="grid grid-cols-1 lg:grid-cols-[35fr_40fr_25fr] gap-8 items-stretch">
+          <VideosSection videos={otherVideos} />
+          <PodcastSection podcasts={podcasts || []} />
+          <ExplainerSection videos={explainerVideos} />
         </div>
       </section>
 

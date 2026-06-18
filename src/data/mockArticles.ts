@@ -52,7 +52,7 @@ export const mockArticles: Article[] = [
     slug: 'govt-scheme-new-update-ladli-behna',
     excerpt: 'लाडली बहना योजना के लाभार्थियों के लिए महत्वपूर्ण सूचना। सरकार ने पात्रता नियमों और भुगतान प्रक्रिया में कुछ बड़े बदलाव किए हैं। जानें पूरी जानकारी।',
     content: 'मध्य प्रदेश सरकार की सबसे लोकप्रिय योजनाओं में से एक, मुख्यमंत्री लाडली बहना योजना में कुछ अहम संशोधन किए गए हैं। महिला एवं बाल विकास विभाग द्वारा जारी नए दिशा-निर्देशों के अनुसार, अब लाभार्थियों के बैंक खातों का डीबीटी (Direct Benefit Transfer) सक्रिय होना अनिवार्य है।\n\nइसके अलावा, अपात्रता की श्रेणियों में भी संशोधन किया गया है ताकि योजना का लाभ केवल जरूरतमंद महिलाओं तक ही पहुंचे। सरकार ने घोषणा की है कि अगले चरण के आवेदन जल्द ही शुरू होंगे, जिसमें छूटी हुई योग्य महिलाओं को पंजीकरण का मौका मिलेगा। अधिकारियों ने महिलाओं से अपील की है कि वे अपने आधार कार्ड और बैंक खाते को समय रहते लिंक करवा लें ताकि मासिक सहायता राशि में कोई रुकावट न आए।',
-    thumbnail: 'https://images.unsplash.com/photo-1546422904-90eabf3bac0a?q=80&w=800',
+    thumbnail: 'https://images.unsplash.com/photo-1484807352052-23338990c6c6?q=80&w=800',
     category: mockCategories[0], // MP News
     author: mockAuthors.reporter,
     readTime: '4 मिनट',
@@ -100,7 +100,7 @@ export const mockArticles: Article[] = [
     slug: 'gwalior-fort-conservation-asi-new-plan',
     excerpt: 'ग्वालियर के ऐतिहासिक किले की सुरक्षा और आकर्षण को बढ़ाने के लिए भारतीय पुरातत्व सर्वेक्षण (ASI) ने बड़ी योजना बनाई है।',
     content: 'ग्वालियर के मानसिंह महल और किले की ऐतिहासिक दीवारों के संरक्षण के लिए भारतीय पुरातत्व सर्वेक्षण (ASI) ने एक विशेष संरक्षण प्रोजेक्ट की शुरुआत की है। इस प्रोजेक्ट के तहत किले के जर्जर हिस्सों की मरम्मत रासायनिक उपचार तकनीक से की जाएगी।\n\nइसके साथ ही, पर्यटकों के लिए रोमांच बढ़ाने के लिए किले के भीतर बंद पड़े कुछ गुप्त रास्तों और तहखानों को सुरक्षा मानकों के अनुरूप तैयार कर खोला जाएगा। पर्यटकों के लिए नए सूचना पट्ट और ऑडियो गाइड की भी व्यवस्था की जा रही है। एएसआई के अधिकारियों के अनुसार, इस कदम से किले का ऐतिहासिक ढांचा सुरक्षित रहेगा और पर्यटन राजस्व में वृद्धि होगी।',
-    thumbnail: 'https://images.unsplash.com/photo-1600100397608-f010e42ed3ec?q=80&w=800',
+    thumbnail: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=800',
     category: mockCategories[0],
     author: mockAuthors.editor,
     readTime: '3 मिनट',
@@ -108,6 +108,22 @@ export const mockArticles: Article[] = [
     views: 420,
     commentsCount: 5,
     tags: ['ग्वालियर', 'ग्वालियर किला', 'पुरातत्व', 'ऐतिहासिक धरोहर']
+  },
+  // Ujjain News (6th MP Article)
+  {
+    id: 'art-13',
+    title: 'उज्जैन महाकाल लोक: पर्यटकों की सुरक्षा के लिए तैनात की जाएगी नई स्पेशल सिक्योरिटी फोर्स',
+    slug: 'ujjain-mahakal-lok-new-special-security-force',
+    excerpt: 'महाकाल मंदिर परिसर में श्रद्धालुओं की भारी भीड़ को देखते हुए सुरक्षा व्यवस्था को पुख्ता करने की तैयारी। हाईटेक सीसीटीवी कैमरों से होगी निगरानी।',
+    content: 'उज्जैन के प्रसिद्ध ज्योतिर्लिंग बाबा महाकाल मंदिर और नव-निर्मित महाकाल लोक में देश-विदेश से आने वाले श्रद्धालुओं की रिकॉर्ड संख्या को देखते हुए सुरक्षा के कड़े इंतजाम किए जा रहे हैं। प्रशासन ने मंदिर परिसर के लिए एक समर्पित विशेष सुरक्षा बल गठित करने का निर्णय लिया है।\n\nयह सुरक्षा बल मंदिर के अंदर और बाहर भीड़ नियंत्रण, वीआईपी प्रोटोकॉल और आपातकालीन स्थितियों से निपटने के लिए प्रशिक्षित होगा। इसके अलावा, पूरे परिसर में 500 से अधिक नए हाई-डेफिनिशन नाइट विजन सीसीटीवी कैमरे लगाए जाएंगे, जिनका नियंत्रण कक्ष सीधे पुलिस मुख्यालय से जुड़ा होगा। कलेक्टर के अनुसार, पर्यटकों की सुरक्षा और सुविधा हमारी सर्वोच्च प्राथमिकता है और इस योजना पर तेजी से काम चल रहा है।',
+    thumbnail: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=800',
+    category: mockCategories[0],
+    author: mockAuthors.editor,
+    readTime: '3 मिनट',
+    publishedAt: '5 घंटे पहले',
+    views: 650,
+    commentsCount: 9,
+    tags: ['उज्जैन', 'महाकाल लोक', 'सुरक्षा व्यवस्था', 'धार्मिक पर्यटन']
   },
   // Aayudh Khaas Section
   {
@@ -171,6 +187,21 @@ export const mockArticles: Article[] = [
     commentsCount: 14,
     tags: ['विधानसभा', 'विपक्ष हंगामा', 'महंगाई', 'बेरोजगारी']
   },
+  {
+    id: 'art-18',
+    title: 'लोकसभा चुनाव की तैयारियां तेज: चुनाव आयोग ने जारी किए नए दिशा-निर्देश, मतदान केंद्रों पर होंगी खास सुविधाएं',
+    slug: 'lok-sabha-elections-preparations-new-guidelines',
+    excerpt: 'आगामी चुनाव को लेकर चुनाव आयोग अलर्ट मोड पर है। शांतिपूर्ण और पारदर्शी चुनाव सुनिश्चित करने के लिए कई नए नियम बनाए गए हैं।',
+    content: 'आगामी चुनाव को लेकर चुनाव आयोग अलर्ट मोड पर है। शांतिपूर्ण और पारदर्शी चुनाव सुनिश्चित करने के लिए कई नए नियम बनाए गए हैं।',
+    thumbnail: 'https://images.unsplash.com/photo-1560961911-ba7fea0a9aa8?q=80&w=800',
+    category: mockCategories[1],
+    author: mockAuthors.editor,
+    readTime: '3 मिनट',
+    publishedAt: '4 घंटे पहले',
+    views: 1300,
+    commentsCount: 22,
+    tags: ['चुनाव', 'लोकसभा', 'राजनीती']
+  },
   // Entertainment
   {
     id: 'art-10',
@@ -186,6 +217,36 @@ export const mockArticles: Article[] = [
     views: 1450,
     commentsCount: 22,
     tags: ['भोपाल शूटिंग', 'बॉलीवुड', 'मनोरंजन न्यूज़', 'सिनेमा']
+  },
+  {
+    id: 'art-19',
+    title: 'कान्स फिल्म फेस्टिवल में भारतीय सितारों का जलवा, रेड कार्पेट पर बिखेरा जादू',
+    slug: 'cannes-film-festival-indian-stars',
+    excerpt: 'इस साल कान्स फिल्म फेस्टिवल में भारतीय सिनेमा की मजबूत उपस्थिति दर्ज की गई। कई सितारों ने अपनी खूबसूरत पोशाकों और फिल्मों से सबका ध्यान खींचा।',
+    content: 'इस साल कान्स फिल्म फेस्टिवल में भारतीय सिनेमा की मजबूत उपस्थिति दर्ज की गई। कई सितारों ने अपनी खूबसूरत पोशाकों और फिल्मों से सबका ध्यान खींचा।',
+    thumbnail: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=800',
+    category: mockCategories[5],
+    author: mockAuthors.editor,
+    readTime: '2 मिनट',
+    publishedAt: '5 घंटे पहले',
+    views: 2100,
+    commentsCount: 34,
+    tags: ['कान्स 2025', 'बॉलीवुड', 'रेड कार्पेट']
+  },
+  {
+    id: 'art-20',
+    title: 'ओटीटी पर इस वीकेंड रिलीज हो रही हैं ये धांसू वेब सीरीज, सस्पेंस और थ्रिलर का मिलेगा डबल डोज',
+    slug: 'ott-weekend-releases-web-series',
+    excerpt: 'इस वीकेंड ओटीटी प्लेटफॉर्म्स पर दर्शकों के लिए कई शानदार विकल्प मौजूद हैं। जानिए कौन सी नई वेब सीरीज आपका मनोरंजन करने के लिए तैयार हैं।',
+    content: 'इस वीकेंड ओटीटी प्लेटफॉर्म्स पर दर्शकों के लिए कई शानदार विकल्प मौजूद हैं। जानिए कौन सी नई वेब सीरीज आपका मनोरंजन करने के लिए तैयार हैं।',
+    thumbnail: 'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=800',
+    category: mockCategories[5],
+    author: mockAuthors.reporter,
+    readTime: '4 मिनट',
+    publishedAt: '8 घंटे पहले',
+    views: 3450,
+    commentsCount: 45,
+    tags: ['ओटीटी', 'वेब सीरीज', 'वीकेंड', 'मनोरंजन']
   },
   // Lifestyle
   {
@@ -203,6 +264,36 @@ export const mockArticles: Article[] = [
     commentsCount: 11,
     tags: ['हेल्थ टिप्स', 'घरेलू नुस्खे', 'लाइफस्टाइल', 'इम्यूनिटी']
   },
+  {
+    id: 'art-21',
+    title: 'योग और ध्यान: तनाव मुक्त जीवन जीने के 5 सरल तरीके',
+    slug: 'yoga-and-meditation-tips-for-stress-free-life',
+    excerpt: 'आज की भागदौड़ भरी जिंदगी में तनाव आम बात है। इन सरल योग और ध्यान के तरीकों से आप अपने मन और शरीर को शांत रख सकते हैं।',
+    content: 'आज की भागदौड़ भरी जिंदगी में तनाव आम बात है। इन सरल योग और ध्यान के तरीकों से आप अपने मन और शरीर को शांत रख सकते हैं।',
+    thumbnail: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800',
+    category: mockCategories[6],
+    author: mockAuthors.reporter,
+    readTime: '3 मिनट',
+    publishedAt: '2 घंटे पहले',
+    views: 1200,
+    commentsCount: 18,
+    tags: ['योग', 'ध्यान', 'लाइफस्टाइल', 'स्वास्थ्य']
+  },
+  {
+    id: 'art-22',
+    title: 'स्किन केयर टिप्स: गर्मियों में अपनी त्वचा को ग्लोइंग और हाइड्रेटेड कैसे रखें',
+    slug: 'summer-skin-care-tips-glowing-hydrated-skin',
+    excerpt: 'गर्मियों में त्वचा को खास देखभाल की जरूरत होती है। इन आसान स्किन केयर टिप्स को अपनाकर पाएं दमकती और हाइड्रेटेड त्वचा।',
+    content: 'गर्मियों में त्वचा को खास देखभाल की जरूरत होती है। इन आसान स्किन केयर टिप्स को अपनाकर पाएं दमकती और हाइड्रेटेड त्वचा।',
+    thumbnail: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=800',
+    category: mockCategories[6],
+    author: mockAuthors.editor,
+    readTime: '4 मिनट',
+    publishedAt: '5 घंटे पहले',
+    views: 2400,
+    commentsCount: 29,
+    tags: ['स्किन केयर', 'गर्मियां', 'ब्यूटी', 'लाइफस्टाइल']
+  },
   // Cricket / Sports
   {
     id: 'art-12',
@@ -218,5 +309,65 @@ export const mockArticles: Article[] = [
     views: 3200,
     commentsCount: 65,
     tags: ['वैभव सूर्यवंशी', 'क्रिकेट न्यूज़', 'दोहरा शतक', 'घरेलू क्रिकेट']
+  },
+  {
+    id: 'art-14',
+    title: 'सरकारी योजना को लेकर नया अपडेट जारी: मुख्यमंत्री लाडली बहना योजना में बड़ा बदलाव',
+    slug: 'ladli-behna-update-special',
+    excerpt: 'लाडली बहना योजना के लाभार्थियों के लिए महत्वपूर्ण सूचना।',
+    content: 'लाडली बहना योजना के लाभार्थियों के लिए महत्वपूर्ण सूचना।',
+    thumbnail: 'https://images.unsplash.com/photo-1484807352052-23338990c6c6?q=80&w=800',
+    category: { id: 'special', name: 'आयुध ख़ास', slug: 'aayudh-khaas' },
+    author: mockAuthors.editor,
+    readTime: '4 मिनट',
+    publishedAt: '2 घंटे पहले',
+    views: 1200,
+    commentsCount: 15,
+    tags: ['विशेष']
+  },
+  {
+    id: 'art-15',
+    title: 'स्वच्छता सर्वेक्षण 2026: इंदौर ने फिर रचा इतिहास, लगातार आठवीं बार जीता देश का सबसे स्वच्छ शहर का खिताब',
+    slug: 'indore-swachh-2026-special',
+    excerpt: 'इंदौर ने एक बार फिर देश में अपना परचम लहराया है।',
+    content: 'इंदौर ने एक बार फिर देश में अपना परचम लहराया है।',
+    thumbnail: 'https://images.unsplash.com/photo-1473163928189-364b2c4e1135?q=80&w=800',
+    category: { id: 'special', name: 'आयुध ख़ास', slug: 'aayudh-khaas' },
+    author: mockAuthors.reporter,
+    readTime: '3 मिनट',
+    publishedAt: '4 घंटे पहले',
+    views: 890,
+    commentsCount: 12,
+    tags: ['विशेष']
+  },
+  {
+    id: 'art-16',
+    title: 'नर्मदा घाटों के विकास के लिए 100 करोड़ रुपये का बजट मंजूर, पर्यटन और धार्मिक स्थलों को मिलेगा बढ़ावा',
+    slug: 'narmada-ghats-budget-special',
+    excerpt: 'जबलपुर के भेड़ाघाट और ग्वारीघाट के कायाकल्प की तैयारी।',
+    content: 'जबलपुर के भेड़ाघाट और ग्वारीघाट के कायाकल्प की तैयारी।',
+    thumbnail: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?q=80&w=800',
+    category: { id: 'special', name: 'आयुध ख़ास', slug: 'aayudh-khaas' },
+    author: mockAuthors.editor,
+    readTime: '5 मिनट',
+    publishedAt: '6 घंटे पहले',
+    views: 1400,
+    commentsCount: 20,
+    tags: ['विशेष']
+  },
+  {
+    id: 'art-17',
+    title: 'उज्जैन महाकाल लोक: पर्यटकों की सुरक्षा के लिए तैनात की जाएगी नई स्पेशल सिक्योरिटी फोर्स',
+    slug: 'ujjain-mahakal-security-special',
+    excerpt: 'महाकाल मंदिर परिसर में सुरक्षा व्यवस्था को पुख्ता करने की तैयारी।',
+    content: 'महाकाल मंदिर परिसर में सुरक्षा व्यवस्था को पुख्ता करने की तैयारी।',
+    thumbnail: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=800',
+    category: { id: 'special', name: 'आयुध ख़ास', slug: 'aayudh-khaas' },
+    author: mockAuthors.reporter,
+    readTime: '3 मिनट',
+    publishedAt: '1 दिन पहले',
+    views: 2100,
+    commentsCount: 35,
+    tags: ['विशेष']
   }
 ];

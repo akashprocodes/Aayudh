@@ -3,14 +3,15 @@ import { Podcast } from '../types/podcast';
 export const mockPodcasts: Podcast[] = [
   {
     id: 'pod-1',
-    title: 'Ground Report: MP के गांवों की असली समस्या क्या है? जल संकट और शिक्षा',
+    title: 'Ground Report: MP के गांवों की असली समस्या क्या है?',
     slug: 'ground-report-mp-villages-real-issues-podcast',
     audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
     thumbnail: 'https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=800',
     duration: '22:15',
     publishedAt: '2 दिन पहले',
     host: 'प्रिया शर्मा',
-    description: 'इस पॉडकास्ट में सुनिए मध्य प्रदेश के झाबुआ और खरगोन जिले के गांवों की ग्राउंड रियलिटी, जहां पानी, शिक्षा और स्वास्थ्य जैसी बुनियादी सुविधाएं आज भी एक चुनौती बनी हुई हैं।'
+    description: 'जल संकट और शिक्षा। इस ग्राउंड रिपोर्ट में जानिए कि कैसे मध्य प्रदेश के दूरदराज गांवों में आज भी बुनियादी सुविधाओं का अभाव है और यह बच्चों के भविष्य को कैसे प्रभावित कर रहा है। पूरी कहानी विस्तार से देखें।',
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
   },
   {
     id: 'pod-2',

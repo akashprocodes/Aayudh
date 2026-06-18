@@ -15,9 +15,9 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   accentColor = 'navy'
 }) => {
   return (
-    <div className={cn("mb-6 border-b border-slate-100 pb-3", className)}>
+    <div className={cn("mb-6 relative pb-3.5 select-none", className)}>
       <div className="flex flex-col gap-1">
-        <h2 className="text-2xl font-bold tracking-tight text-brand-navy font-serif">
+        <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 font-serif">
           {title}
         </h2>
         {subtitle && (
@@ -26,9 +26,11 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
           </p>
         )}
       </div>
+      {/* Integrated bottom border design */}
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-slate-100" />
       <div
         className={cn(
-          "mt-2 h-[3px] w-16 rounded-full",
+          "absolute bottom-0 left-0 h-[3px] w-16 rounded-full -mb-[1px]",
           accentColor === 'purple' ? "bg-brand-purple" : "bg-brand-navy"
         )}
       />
@@ -37,3 +39,4 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
 };
 
 export default SectionHeading;
+

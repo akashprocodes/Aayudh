@@ -13,9 +13,9 @@ export const AayudhKhaasSection: React.FC<AayudhKhaasSectionProps> = ({ articles
   return (
     <section className="py-8 border-b border-slate-100">
       <SectionHeading title="आयुध ख़ास" accentColor="navy" />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {articles.slice(0, 3).map((art) => (
-          <ArticleCard key={art.id} article={art} layout="vertical" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {articles.slice(0, 6).map((art) => (
+          <ArticleCard key={art.id} article={art} layout="vertical" variant="simple" />
         ))}
       </div>
     </section>

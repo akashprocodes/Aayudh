@@ -7,4 +7,5 @@ export interface Short {
   tag: string;
   likes?: number;
   bgColor?: string;
+  overlayTitle?: string;
 }

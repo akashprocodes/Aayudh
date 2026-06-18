@@ -23,4 +23,6 @@ export interface Article {
   views?: number;
   commentsCount?: number;
   tags?: string[];
+  location?: string;
+  fullPublishedDate?: string;
 }

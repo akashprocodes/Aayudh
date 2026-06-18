@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Short } from '@/types/shorts';
 import { SectionHeading } from '../common/SectionHeading';
@@ -12,6 +13,17 @@ interface ShortsSectionProps {
 
 export const ShortsSection: React.FC<ShortsSectionProps> = ({ shorts }) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [showLeftArrow, setShowLeftArrow] = useState(false);
+  const [showRightArrow, setShowRightArrow] = useState(false);
+
+  const handleScroll = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      const hasOverflow = scrollWidth > clientWidth;
+      setShowLeftArrow(hasOverflow && scrollLeft > 5);
+      setShowRightArrow(hasOverflow && scrollLeft + clientWidth < scrollWidth - 5);
+    }
+  };
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
@@ -24,47 +36,65 @@ export const ShortsSection: React.FC<ShortsSectionProps> = ({ shorts }) => {
     }
   };
 
+  useEffect(() => {
+    handleScroll();
+    // Add window resize listener to update arrow visibility if screen width changes
+    window.addEventListener('resize', handleScroll);
+    return () => window.removeEventListener('resize', handleScroll);
+  }, [shorts]);
+
   return (
-    <section className="py-8 border-b border-slate-100">
-      <div className="flex justify-between items-end mb-4">
-        <div className="flex-1">
-          <SectionHeading
-            title="Shorts Section"
-            subtitle="Vertical short news cards for mobile-first audience"
-            accentColor="purple"
-            className="mb-0 border-b-0 pb-0"
-          />
-        </div>
-        
-        {/* Navigation arrows (Desktop only) */}
-        <div className="hidden sm:flex gap-2">
-          <button
-            onClick={() => scroll('left')}
-            className="rounded-full border border-slate-200 bg-white p-2 text-slate-600 hover:border-brand-purple hover:text-brand-purple hover:bg-brand-purple-light transition-all cursor-pointer"
-            aria-label="पीछे स्क्रॉल करें"
-          >
-            <ChevronLeft className="w-4 h-4" />
-          </button>
-          <button
-            onClick={() => scroll('right')}
-            className="rounded-full border border-slate-200 bg-white p-2 text-slate-600 hover:border-brand-purple hover:text-brand-purple hover:bg-brand-purple-light transition-all cursor-pointer"
-            aria-label="आगे स्क्रॉल करें"
-          >
-            <ChevronRight className="w-4 h-4" />
-          </button>
-        </div>
+    <section className="py-8 border-b border-slate-100 relative group/shorts">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 border-b border-slate-200 pb-5 relative px-[10px]">
+        <h2 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900 font-serif">
+          वीडियो शॉर्ट्स
+        </h2>
+        <Link
+          href="/shorts"
+          className="shrink-0 rounded-[14px] px-4 py-1.5 text-[12px] font-semibold tracking-wide transition-all duration-300 border cursor-pointer bg-red-600 text-white border-red-600 hover:bg-red-700 hover:border-red-700 shadow-md shadow-red-600/25 self-start md:self-auto"
+        >
+          और भी
+        </Link>
+        {/* Thick purple accent border locked to the parent's border-bottom, aligned with left padding */}
+        <div className="absolute bottom-[-1px] left-[10px] h-[3px] w-24 rounded-full bg-brand-purple" />
       </div>
 
-      {/* Horizontal Carousel */}
-      <div
-        ref={scrollContainerRef}
-        className="flex gap-4 overflow-x-auto no-scrollbar pb-3 pt-1 px-1 snap-x scroll-smooth"
-      >
-        {shorts.map((short) => (
-          <div key={short.id} className="snap-start">
-            <ShortsCard short={short} />
-          </div>
-        ))}
+      {/* Carousel Wrapper with Relative positioning for absolute arrows */}
+      <div className="relative">
+        {/* Left Navigation Arrow */}
+        {showLeftArrow && (
+          <button
+            onClick={() => scroll('left')}
+            className="absolute -left-2 top-1/2 -translate-y-1/2 z-20 hidden sm:flex items-center justify-center w-8 h-12 rounded bg-white border border-slate-200/80 shadow-md text-slate-500 hover:text-brand-purple hover:border-brand-purple hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
+            aria-label="पीछे स्क्रॉल करें"
+          >
+            <ChevronLeft className="w-5 h-5 stroke-[2.5]" />
+          </button>
+        )}
+
+        {/* Right Navigation Arrow */}
+        {showRightArrow && (
+          <button
+            onClick={() => scroll('right')}
+            className="absolute -right-2 top-1/2 -translate-y-1/2 z-20 hidden sm:flex items-center justify-center w-8 h-12 rounded bg-white border border-slate-200/80 shadow-md text-slate-500 hover:text-brand-purple hover:border-brand-purple hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
+            aria-label="आगे स्क्रॉल करें"
+          >
+            <ChevronRight className="w-5 h-5 stroke-[2.5]" />
+          </button>
+        )}
+
+        {/* Horizontal Carousel */}
+        <div
+          ref={scrollContainerRef}
+          onScroll={handleScroll}
+          className="flex gap-4 overflow-x-auto no-scrollbar pb-3 pt-1 px-1 snap-x scroll-smooth"
+        >
+          {shorts.map((short) => (
+            <div key={short.id} className="snap-start">
+              <ShortsCard short={short} />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

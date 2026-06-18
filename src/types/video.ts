@@ -8,5 +8,6 @@ export interface Video {
   publishedAt: string;
   views?: string;
   category?: string;
+  description?: string;
   type: 'explainer' | 'normal' | 'podcast';
 }

@@ -5,7 +5,6 @@ export const REGIONS = [
   { name: "भोपाल", value: "bhopal" },
   { name: "इंदौर", value: "indore" },
   { name: "जबलपुर", value: "jabalpur" },
-  { name: "ग्वालियर", value: "gwalior" },
 ];
 
 export const SHARE_LINKS = {

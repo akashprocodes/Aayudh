@@ -22,11 +22,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
         
         {/* Left Side: Large Featured Banner (Col-span-2) */}
-        <div className="lg:col-span-2 flex flex-col justify-between border border-slate-200/60 rounded-2xl p-4 sm:p-6 bg-white hover:shadow-md transition-all duration-300">
+        <div className="lg:col-span-2 flex flex-col justify-center border border-slate-200/60 rounded-2xl p-4 sm:p-6 bg-white shadow-sm transition-all duration-300">
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             {/* Featured Image */}
-            <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
+            <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100 shadow-md border border-slate-100/50">
               <img
                 src={featuredArticle.thumbnail}
                 alt={featuredArticle.title}

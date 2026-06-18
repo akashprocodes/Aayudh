@@ -31,7 +31,7 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header className="w-full bg-transparent pt-4 pb-2">
+    <header className="font-sans w-full bg-transparent pt-4 pb-2">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Capsule container */}
         <div className="relative flex h-14 items-center justify-between rounded-full bg-brand-navy px-6 text-white shadow-lg border border-brand-navy-light">
@@ -110,7 +110,7 @@ export const Header: React.FC = () => {
 
               <button
                 onClick={() => setIsSearchExpanded(!isSearchExpanded)}
-                className="rounded-full p-1.5 text-slate-300 hover:bg-brand-navy-light hover:text-white cursor-pointer"
+                className="rounded-[8px] p-1.5 text-slate-300 hover:bg-brand-navy-light hover:text-white cursor-pointer"
                 aria-label="Toggle search input"
               >
                 {isSearchExpanded ? <X className="h-4.5 w-4.5" /> : <Search className="h-4.5 w-4.5" />}
@@ -121,13 +121,13 @@ export const Header: React.FC = () => {
 
             {/* Social Media Icons (Hidden on Mobile) */}
             <div className="hidden md:flex items-center gap-1 shrink-0">
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="rounded-full p-1.5 text-slate-300 hover:text-white hover:bg-brand-navy-light/40 transition-colors" aria-label="Facebook">
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="rounded-[8px] p-1.5 text-slate-300 hover:text-white hover:bg-brand-navy-light/40 transition-colors" aria-label="Facebook">
                 <FacebookIcon className="h-3.5 w-3.5" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="rounded-full p-1.5 text-slate-300 hover:text-white hover:bg-brand-navy-light/40 transition-colors" aria-label="Twitter">
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="rounded-[8px] p-1.5 text-slate-300 hover:text-white hover:bg-brand-navy-light/40 transition-colors" aria-label="Twitter">
                 <TwitterIcon className="h-3.5 w-3.5" />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noreferrer" className="rounded-full p-1.5 text-slate-300 hover:text-white hover:bg-brand-navy-light/40 transition-colors" aria-label="Youtube">
+              <a href="https://youtube.com" target="_blank" rel="noreferrer" className="rounded-[8px] p-1.5 text-slate-300 hover:text-white hover:bg-brand-navy-light/40 transition-colors" aria-label="Youtube">
                 <YoutubeIcon className="h-3.5 w-3.5" />
               </a>
             </div>
@@ -136,7 +136,7 @@ export const Header: React.FC = () => {
 
             {/* Magazine Button (Replaced Shorts) */}
             <Link href="/category/magazine" className="shrink-0">
-              <Button className="bg-brand-purple hover:bg-brand-purple-dark text-white font-sans text-xs px-4 py-1.5 rounded-full font-bold border-none hover:shadow-md hover:shadow-brand-purple/20 transition-all cursor-pointer">
+              <Button className="bg-brand-purple hover:bg-brand-purple-dark text-white font-sans text-xs px-4 py-1.5 rounded-[8px] font-bold border-none hover:shadow-md hover:shadow-brand-purple/20 transition-all cursor-pointer">
                 मैगज़ीन 📖
               </Button>
             </Link>

@@ -27,62 +27,46 @@ export const PodcastCard: React.FC<PodcastCardProps> = ({ podcast, className }) 
   };
 
   return (
-    <Card className={`overflow-hidden p-0 bg-white border border-slate-100 flex flex-col ${className}`}>
+    <div className={`flex flex-col ${className || ''}`}>
       
-      {/* Player Display (Dark Slate Video-like Box) */}
-      <div className="relative aspect-video bg-[#0b1329] flex items-center justify-center group overflow-hidden">
-        <img
-          src={podcast.thumbnail}
-          alt={podcast.title}
-          className="absolute inset-0 w-full h-full object-cover opacity-35 group-hover:scale-105 transition-transform duration-500"
-        />
-        
-        {/* Play overlay button */}
-        <button
+      {/* Player Display */}
+      {podcast.videoUrl ? (
+        <div className="relative aspect-video rounded-xl overflow-hidden shrink-0 bg-[#0E1528]">
+          <iframe 
+            className="w-full h-full"
+            src={podcast.videoUrl} 
+            title={podcast.title}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
+      ) : (
+        <div 
+          className="relative aspect-video bg-[#0E1528] rounded-xl flex items-center justify-center group overflow-hidden cursor-pointer shrink-0"
           onClick={togglePlayback}
-          className="relative z-10 rounded-full bg-red-600 p-4 shadow-lg hover:bg-red-700 hover:scale-110 active:scale-95 transition-all duration-300"
-          aria-label={isPlaying ? 'रोकें' : 'चलाएं'}
         >
-          {isPlaying ? (
-            <Pause className="w-8 h-8 text-white fill-white" />
-          ) : (
-            <Play className="w-8 h-8 text-white fill-white ml-1" />
-          )}
-        </button>
-
-        {/* Live Audio indicator overlay */}
-        {isPlaying && (
-          <div className="absolute bottom-3 left-3 flex items-center gap-1.5 bg-black/55 backdrop-blur-sm px-2.5 py-1 rounded text-[10px] font-bold text-white tracking-wide font-sans">
-            <Volume2 className="w-3.5 h-3.5 animate-bounce text-live-green" />
-            <span>सुन रहे हैं</span>
+          {/* Play overlay button (Simple Red Triangle) */}
+          <div className="z-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 active:scale-95">
+            {isPlaying ? (
+              <Pause className="w-14 h-14 text-red-600 fill-red-600" />
+            ) : (
+              <div className="w-0 h-0 border-t-[18px] border-t-transparent border-l-[30px] border-l-[#C3121E] border-b-[18px] border-b-transparent ml-2" />
+            )}
           </div>
-        )}
+        </div>
+      )}
 
-        <span className="absolute bottom-3 right-3 text-[10px] font-bold text-white bg-black/60 px-2 py-0.5 rounded font-sans">
-          {podcast.duration}
-        </span>
-      </div>
-
-      {/* Title & Info Panel */}
-      <div className="p-4 bg-white">
-        <h4 className="font-serif text-base font-bold text-slate-850 leading-snug line-clamp-2 hover:text-brand-purple transition-colors duration-200">
+      {/* Title Panel */}
+      <div className="pt-3 bg-white flex-1">
+        <h4 className="font-serif text-[16px] sm:text-[18px] font-bold text-[#111827] leading-[1.3] line-clamp-3 hover:text-brand-purple transition-colors duration-200">
           {podcast.title}
         </h4>
-        <p className="mt-1.5 text-xs text-slate-400 font-sans">
-          होस्ट: <span className="font-semibold text-slate-600">{podcast.host}</span>
-        </p>
-        
         {podcast.description && (
-          <p className="mt-2 text-xs text-slate-500 leading-relaxed line-clamp-2 font-sans">
+          <p className="mt-2 text-[13px] sm:text-[14px] text-slate-500 line-clamp-2 leading-relaxed">
             {podcast.description}
           </p>
         )}
-
-        {/* Metadata Footer */}
-        <div className="mt-4 pt-3.5 border-t border-slate-100 flex items-center gap-4 text-[10px] text-slate-400 font-semibold font-sans">
-          <span className="flex items-center gap-1"><Calendar className="w-3.5 h-3.5" /> {podcast.publishedAt}</span>
-          <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> {podcast.duration}</span>
-        </div>
       </div>
 
       {/* Hidden Audio Element */}
@@ -94,7 +78,7 @@ export const PodcastCard: React.FC<PodcastCardProps> = ({ podcast, className }) 
         preload="none"
       />
 
-    </Card>
+    </div>
   );
 };
 

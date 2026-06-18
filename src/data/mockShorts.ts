@@ -3,47 +3,102 @@ import { Short } from '../types/shorts';
 export const mockShorts: Short[] = [
   {
     id: 'short-1',
-    title: '60 सेकंड में MP की बड़ी खबर: मौसम और ट्रैफिक पर बड़े अपडेट्स',
-    slug: '60-seconds-mp-big-news-weather-traffic',
+    title: 'जेईई एडवांस्ड टॉपर शुभम की कहानी',
+    slug: 'jee-topper-shubham-story',
     tag: 'SHORT',
     likes: 345,
-    bgColor: 'from-indigo-400 to-purple-600',
+    overlayTitle: 'JEE टॉपर शुभम की पूरी कहानी',
+    thumbnail: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=600',
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4'
   },
   {
     id: 'short-2',
-    title: 'Cricket का सबसे तेज अपडेट: आईपीएल 2026 में आरसीबी की नई रणनीति',
-    slug: 'cricket-fastest-update-rcb-new-strategy-ipl-2026',
+    title: 'सिंधु सभ्यता से पहचान क्यों बदल रही',
+    slug: 'harappa-mohenjodaro-civilization-identity',
     tag: 'SHORT',
     likes: 820,
-    bgColor: 'from-fuchsia-400 to-pink-600',
+    overlayTitle: '‘हड़प्पा-मोहनजोदाड़ो हमारे हैं’',
+    thumbnail: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=600',
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4'
   },
   {
     id: 'short-3',
-    title: 'आज का मौसम alert: मध्य प्रदेश के इन 10 जिलों में भारी बारिश की चेतावनी',
-    slug: 'today-weather-alert-mp-rain-warning',
+    title: 'सोने जैसे बालों वाला भैंसा हुआ वायरल',
+    slug: 'golden-hair-buffalo-viral',
     tag: 'SHORT',
     likes: 1240,
-    bgColor: 'from-orange-400 to-red-500',
+    overlayTitle: '‘डॉनल्ड ट्रंप’ कुर्बान होते होते रह गया!',
+    thumbnail: 'https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?q=80&w=600',
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4'
   },
   {
     id: 'short-4',
-    title: 'राशिफल quick update: आज इन 5 राशियों की चमकने वाली है किस्मत, जानें भाग्य',
-    slug: 'horoscope-quick-update-lucky-zodiacs',
+    title: 'फेयरनेस इंजेक्शन पर बढ़ी नई सख्ती',
+    slug: 'beauty-industry-fairness-injection-rules',
     tag: 'SHORT',
     likes: 540,
-    bgColor: 'from-emerald-400 to-teal-600',
+    overlayTitle: 'Beauty Industry का काला सच',
+    thumbnail: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=600',
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4'
   },
   {
     id: 'short-5',
-    title: 'Viral local video: भोपाल की सड़कों पर दिखा अनोखा नजारा, सोशल मीडिया पर चर्चा',
-    slug: 'viral-local-video-bhopal-streets-buzz',
+    title: 'माही महंत: राजनीति में बदला नया दौर',
+    slug: 'transgender-candidate-mahi-mahant-election',
     tag: 'SHORT',
     likes: 2130,
-    bgColor: 'from-amber-400 to-yellow-600',
+    overlayTitle: 'चुनाव जीतने वाली ट्रांसजेंडर माही महंत कौन हैं?',
+    thumbnail: 'https://images.unsplash.com/photo-1577985051167-0d49eec21977?q=80&w=600',
+    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4'
+  },
+  {
+    id: 'short-6',
+    title: 'रेलवे का नया नियम: यात्रियों को मिलेगी बड़ी राहत',
+    slug: 'railway-new-rules-passenger-relief',
+    tag: 'SHORT',
+    likes: 980,
+    overlayTitle: 'रेलवे यात्रियों के लिए बड़ी खुशखबरी',
+    thumbnail: 'https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=600',
+    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4'
+  },
+  {
+    id: 'short-7',
+    title: 'सोना-चांदी भाव: आज फिर आई भारी गिरावट',
+    slug: 'gold-silver-price-drop-today',
+    tag: 'SHORT',
+    likes: 1420,
+    overlayTitle: 'सोना हुआ बेहद सस्ता! जानें ताजा भाव',
+    thumbnail: 'https://images.unsplash.com/photo-1610375461246-83df859d8222?q=80&w=600',
+    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4'
+  },
+  {
+    id: 'short-8',
+    title: 'मप्र बोर्ड परीक्षा परिणाम: छात्राओं ने मारी बाजी',
+    slug: 'mp-board-results-girls-top-performance',
+    tag: 'SHORT',
+    likes: 750,
+    overlayTitle: 'MP बोर्ड परीक्षा में लड़कियों का जलवा',
+    thumbnail: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=600',
+    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4'
+  },
+  {
+    id: 'short-9',
+    title: 'मप्र में पर्यटन: मांडू के ऐतिहासिक महलों का दीदार',
+    slug: 'mp-tourism-historic-mandu-palaces-visit',
+    tag: 'SHORT',
+    likes: 1100,
+    overlayTitle: 'खूबसूरत मांडू के ऐतिहासिक महल',
+    thumbnail: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?q=80&w=600',
+    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4'
+  },
+  {
+    id: 'short-10',
+    title: 'स्मार्टफोन लॉन्च: कम कीमत में मिल रहे हैं धांसू फीचर्स',
+    slug: 'new-smartphone-launch-india-budget-features',
+    tag: 'SHORT',
+    likes: 1850,
+    overlayTitle: 'धमाकेदार स्मार्टफोन भारत में लॉन्च',
+    thumbnail: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=600',
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4'
   }
 ];
