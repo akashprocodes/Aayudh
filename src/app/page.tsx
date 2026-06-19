@@ -12,6 +12,7 @@ import { PodcastSection } from '@/components/home/PodcastSection';
 import { ExplainerSection } from '@/components/home/ExplainerSection';
 import { AayudhKhaasSection } from '@/components/home/AayudhKhaasSection';
 import { PoliticsSection } from '@/components/home/PoliticsSection';
+import { TopNewsTicker } from '@/components/home/TopNewsTicker';
 import { EntertainmentSection } from '@/components/home/EntertainmentSection';
 import { LifestyleSection } from '@/components/home/LifestyleSection';
 import { AstrologySection } from '@/components/home/AstrologySection';
@@ -58,6 +59,9 @@ export default function HomePage() {
 
   return (
     <div className="space-y-3 pb-8">
+      {/* 0. Top Breaking News Ticker */}
+      <TopNewsTicker news={latestArticles.slice(0, 5)} />
+
       {/* 1. Hero Featured Section */}
       <HeroSection featuredArticle={featuredArticle} latestArticles={latestArticles} />
 

@@ -67,7 +67,7 @@ export const Header: React.FC = () => {
 
             {/* Main categories (Hidden on tablet/mobile) */}
             <nav className="hidden lg:block min-w-0">
-              <ul className="flex items-center gap-3 xl:gap-5 font-sans text-[13px] xl:text-[14px] font-semibold text-slate-300 whitespace-nowrap">
+              <ul className="flex items-center gap-3 xl:gap-5 font-sans text-[13px] xl:text-[14px] font-semibold text-white whitespace-nowrap">
                 {mainNav.map((item) => {
                   const isActive = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href));
                   const isMPNews = item.title === "मध्यप्रदेश न्यूज़";
@@ -78,7 +78,7 @@ export const Header: React.FC = () => {
                         href={item.href}
                         className={cn(
                           "transition-colors duration-200 hover:text-brand-yellow py-4 relative block",
-                          isActive ? "text-brand-yellow font-bold" : "text-slate-300"
+                          isActive ? "text-brand-yellow font-bold" : "text-white"
                         )}
                       >
                         {item.title}
@@ -152,7 +152,7 @@ export const Header: React.FC = () => {
 
               <button
                 onClick={() => setIsSearchExpanded(!isSearchExpanded)}
-                className="rounded-[8px] p-1.5 text-slate-300 hover:bg-brand-navy-light hover:text-white cursor-pointer"
+                className="rounded-[8px] p-1.5 text-white hover:bg-brand-navy-light hover:text-brand-yellow cursor-pointer transition-colors"
                 aria-label="Toggle search input"
               >
                 {isSearchExpanded ? <X className="h-4.5 w-4.5" /> : <Search className="h-4.5 w-4.5" />}
@@ -163,16 +163,16 @@ export const Header: React.FC = () => {
 
             {/* Social Media Icons (Hidden on Mobile) */}
             <div className="hidden md:flex items-center gap-1 shrink-0">
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="rounded-[8px] p-1.5 text-slate-300 hover:text-white hover:bg-brand-navy-light/40 transition-colors" aria-label="Facebook">
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="rounded-[8px] p-1.5 text-white hover:text-brand-yellow hover:bg-brand-navy-light/40 transition-colors" aria-label="Facebook">
                 <FacebookIcon className="h-3.5 w-3.5" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="rounded-[8px] p-1.5 text-slate-300 hover:text-white hover:bg-brand-navy-light/40 transition-colors" aria-label="Twitter">
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="rounded-[8px] p-1.5 text-white hover:text-brand-yellow hover:bg-brand-navy-light/40 transition-colors" aria-label="Twitter">
                 <TwitterIcon className="h-3.5 w-3.5" />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noreferrer" className="rounded-[8px] p-1.5 text-slate-300 hover:text-white hover:bg-brand-navy-light/40 transition-colors" aria-label="Youtube">
+              <a href="https://youtube.com" target="_blank" rel="noreferrer" className="rounded-[8px] p-1.5 text-white hover:text-brand-yellow hover:bg-brand-navy-light/40 transition-colors" aria-label="Youtube">
                 <YoutubeIcon className="h-3.5 w-3.5" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="rounded-[8px] p-1.5 text-slate-300 hover:text-white hover:bg-brand-navy-light/40 transition-colors" aria-label="Instagram">
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="rounded-[8px] p-1.5 text-white hover:text-brand-yellow hover:bg-brand-navy-light/40 transition-colors" aria-label="Instagram">
                 <InstagramIcon className="h-3.5 w-3.5" />
               </a>
             </div>

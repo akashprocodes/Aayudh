@@ -17,7 +17,7 @@ export const TrendingBar: React.FC = () => {
 
   return (
     <div className="border-b border-slate-100 bg-slate-50 py-2.5">
-      <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 font-sans text-xs sm:px-6 lg:px-8">
+      <div className="mx-auto flex justify-center max-w-7xl items-center gap-3 px-4 font-sans text-xs sm:px-6 lg:px-8">
         
         {/* Label */}
         <div className="flex shrink-0 items-center gap-1.5 font-bold text-red-600">

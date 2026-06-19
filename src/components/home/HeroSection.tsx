@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Play } from 'lucide-react';
+import { Play, ChevronRight } from 'lucide-react';
 import { Article } from '@/types/article';
 import { Button } from '../common/Button';
 
@@ -46,9 +46,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 {featuredArticle.excerpt}
               </p>
               
-              <Link href={`/news/${featuredArticle.slug}`} className="mt-5 self-start">
-                <Button className="bg-brand-navy hover:bg-brand-navy-light text-white text-xs px-5 py-2 rounded-full font-semibold font-sans">
-                  Read More
+              <Link href={`/news/${featuredArticle.slug}`} className="mt-6 self-start group">
+                <Button className="bg-gradient-to-r from-brand-navy to-brand-navy-light border border-slate-700/50 text-white text-[11px] px-3.5 py-1.5 rounded-[8px] font-bold font-sans transition-all duration-300 shadow-[0_4px_12px_rgba(4,30,66,0.3)] hover:shadow-[0_6px_20px_rgba(4,30,66,0.5)] hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-1 overflow-hidden relative">
+                  <span className="relative z-10">Read More</span>
+                  <div className="relative z-10 flex items-center justify-center bg-white/10 rounded-full w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:bg-white/20">
+                    <ChevronRight className="w-3 h-3" />
+                  </div>
+                  <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-brand-purple to-brand-navy-light opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </Button>
               </Link>
             </div>
