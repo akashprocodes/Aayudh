@@ -7,6 +7,9 @@ import { SectionHeading } from '../common/SectionHeading';
 import { ArticleCard } from '../article/ArticleCard';
 import { REGIONS } from '@/lib/constants';
 import { ChevronLeft, ChevronRight, ChevronsRight, MapPin } from 'lucide-react';
+import { WeatherWidget } from '../widgets/WeatherWidget';
+import { CricketScoreWidget } from '../widgets/CricketScoreWidget';
+import { NewsletterWidget } from '../widgets/NewsletterWidget';
 
 interface MPNewsSectionProps {
   articles: Article[];
@@ -140,18 +143,30 @@ export const MPNewsSection: React.FC<MPNewsSectionProps> = ({ articles }) => {
           <div className="absolute bottom-0 left-[10px] h-[3px] w-24 rounded-full bg-brand-yellow -mb-[1px]" />
         </div>
 
-        {/* Articles Grid */}
-        {filteredArticles.length === 0 ? (
-          <div className="text-center py-12 text-slate-400 font-sans">
-            इस क्षेत्र के लिए फ़िलहाल कोई खबर उपलब्ध नहीं है।
+        {/* Main Layout: Left Articles, Right Widgets */}
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* Left Column: Articles Grid */}
+          <div className="flex-1 min-w-0">
+            {filteredArticles.length === 0 ? (
+              <div className="text-center py-12 text-slate-400 font-sans border border-slate-100 rounded-2xl bg-slate-50">
+                इस क्षेत्र के लिए फ़िलहाल कोई खबर उपलब्ध नहीं है।
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                {filteredArticles.slice(0, 9).map((art, index) => (
+                  <ArticleCard key={`${art.id}-${index}`} article={art} layout="vertical" variant="simple" />
+                ))}
+              </div>
+            )}
           </div>
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredArticles.slice(0, 6).map((art) => (
-              <ArticleCard key={art.id} article={art} layout="vertical" variant="simple" />
-            ))}
+
+          {/* Right Column: Sidebar Widgets */}
+          <div className="w-full lg:w-[320px] xl:w-[340px] shrink-0 sticky top-24 self-start flex flex-col gap-6">
+            <CricketScoreWidget />
+            <WeatherWidget />
+            <NewsletterWidget />
           </div>
-        )}
+        </div>
       </div>
     </section>
   );

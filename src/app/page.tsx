@@ -39,7 +39,11 @@ export default function HomePage() {
   // Filter articles for specific sections
   const featuredArticle = articles?.find(a => a.isFeatured);
   const latestArticles = articles || [];
-  const mpArticles = articles?.filter(a => a.category.slug === 'madhya-pradesh') || [];
+  let mpArticles = articles?.filter(a => a.category.slug === 'madhya-pradesh') || [];
+  if (mpArticles.length > 0 && mpArticles.length < 9) {
+    mpArticles = [...mpArticles, ...mpArticles.slice(0, 9 - mpArticles.length)];
+  }
+  mpArticles = mpArticles.slice(0, 9);
   const politicsArticles = articles?.filter(a => a.category.slug === 'india') || [];
   const entertainmentArticles = articles?.filter(a => a.category.slug === 'entertainment') || [];
   const lifestyleArticles = articles?.filter(a => a.category.slug === 'lifestyle') || [];

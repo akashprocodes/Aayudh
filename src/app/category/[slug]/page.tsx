@@ -45,7 +45,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
       {articles && articles.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {articles.map((art) => (
-            <ArticleCard key={art.id} article={art} layout="vertical" />
+            <ArticleCard key={art.id} article={art} layout="vertical" variant="simple" />
           ))}
         </div>
       ) : (

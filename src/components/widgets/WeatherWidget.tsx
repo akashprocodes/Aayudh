@@ -1,75 +1,32 @@
-'use client';
-
-import React, { useState } from 'react';
-import { Sun, CloudRain, Cloud, CloudLightning } from 'lucide-react';
-
-interface CityWeather {
-  city: string;
-  temp: number;
-  condition: string;
-  humidity: string;
-  windSpeed: string;
-  icon: 'sun' | 'rain' | 'cloud' | 'lightning';
-}
-
-const mockWeather: CityWeather[] = [
-  { city: 'भोपाल', temp: 32, condition: 'आंशिक रूप से बादल', humidity: '60%', windSpeed: '12 km/h', icon: 'cloud' },
-  { city: 'इंदौर', temp: 31, condition: 'साफ़ मौसम', humidity: '55%', windSpeed: '10 km/h', icon: 'sun' },
-  { city: 'जबलपुर', temp: 33, condition: 'हल्की बारिश', humidity: '72%', windSpeed: '15 km/h', icon: 'rain' },
-  { city: 'ग्वालियर', temp: 36, condition: 'तेज गर्मी', humidity: '45%', windSpeed: '8 km/h', icon: 'sun' }
-];
+import React from 'react';
+import { CloudSun, Wind, Droplets } from 'lucide-react';
 
 export const WeatherWidget: React.FC = () => {
-  const [selectedCity, setSelectedCity] = useState(0);
-  const weather = mockWeather[selectedCity];
-
-  const renderIcon = (type: string) => {
-    switch (type) {
-      case 'sun': return <Sun className="w-10 h-10 text-amber-500 animate-pulse" />;
-      case 'rain': return <CloudRain className="w-10 h-10 text-blue-400" />;
-      case 'lightning': return <CloudLightning className="w-10 h-10 text-purple-400" />;
-      default: return <Cloud className="w-10 h-10 text-slate-400" />;
-    }
-  };
-
   return (
-    <div className="rounded-xl border border-slate-100 bg-white p-4 shadow-sm font-sans">
-      <div className="flex justify-between items-center mb-4">
-        <span className="text-xs font-bold uppercase tracking-wider text-slate-400">मौसम अपडेट (MP)</span>
-        <span className="text-[10px] text-brand-purple font-bold">लाइव</span>
+    <div className="bg-gradient-to-br from-sky-400 to-blue-600 rounded-2xl p-5 text-white shadow-sm relative overflow-hidden">
+      <div className="absolute top-0 right-0 p-4 opacity-20">
+        <CloudSun size={90} />
       </div>
-
-      <div className="flex gap-2 mb-4 overflow-x-auto no-scrollbar pb-1">
-        {mockWeather.map((w, index) => (
-          <button
-            key={w.city}
-            onClick={() => setSelectedCity(index)}
-            className={`shrink-0 rounded-lg px-3 py-1.5 text-xs font-semibold border transition-all ${
-              selectedCity === index
-                ? 'bg-brand-navy border-brand-navy text-white'
-                : 'bg-slate-50 border-slate-200 text-slate-600 hover:border-slate-300'
-            }`}
-          >
-            {w.city}
-          </button>
-        ))}
-      </div>
-
-      <div className="flex items-center justify-between border-t border-slate-50 pt-3">
-        <div className="flex items-center gap-3">
-          {renderIcon(weather.icon)}
-          <div>
-            <div className="text-2xl font-black text-slate-800">{weather.temp}°C</div>
-            <div className="text-xs text-slate-500 font-medium">{weather.condition}</div>
-          </div>
+      
+      <div className="relative z-10">
+        <h3 className="text-xs font-bold uppercase tracking-wider mb-1 text-blue-100">Bhopal, MP</h3>
+        <div className="flex items-end gap-3 mb-5">
+          <span className="text-5xl font-black font-sans leading-none">32°</span>
+          <span className="text-base font-medium text-blue-50 mb-1 leading-none">Partly Cloudy</span>
         </div>
-        <div className="text-[10px] text-slate-400 font-semibold space-y-1">
-          <div>आर्द्रता: {weather.humidity}</div>
-          <div>हवा की गति: {weather.windSpeed}</div>
+        
+        <div className="flex items-center justify-between text-xs font-medium bg-black/15 rounded-xl p-3 backdrop-blur-sm border border-white/10">
+          <div className="flex items-center gap-2">
+            <Wind size={15} className="text-blue-200" />
+            <span>12 km/h</span>
+          </div>
+          <div className="w-[1px] h-4 bg-white/20"></div>
+          <div className="flex items-center gap-2">
+            <Droplets size={15} className="text-blue-200" />
+            <span>45% Hum</span>
+          </div>
         </div>
       </div>
     </div>
   );
 };
-
-export default WeatherWidget;

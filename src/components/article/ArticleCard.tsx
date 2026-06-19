@@ -17,7 +17,7 @@ interface ArticleCardProps {
 export const ArticleCard: React.FC<ArticleCardProps> = ({
   article,
   layout = 'vertical',
-  variant = 'default',
+  variant = 'simple',
   className
 }) => {
   const isSimple = variant === 'simple';
@@ -54,14 +54,14 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
                 </h3>
               </div>
 
-              <div className="w-full border-t border-slate-100/80 pt-3 flex items-center justify-between px-1 overflow-hidden">
-                <div className="flex items-center gap-1.5 min-w-0 mr-2 text-slate-500">
-                  <MapPin className="w-4 h-4 text-[#C3121E] shrink-0 -mt-[2px]" />
-                  <span className="text-xs font-semibold truncate">{article.location || 'Bhopal'}</span>
+              <div className="w-full border-t border-slate-100/80 pt-3 flex flex-wrap items-center justify-between gap-2 px-1 overflow-hidden">
+                <div className="flex items-center gap-1.5 min-w-0 text-slate-500">
+                  <MapPin className="w-3.5 h-3.5 text-[#C3121E] shrink-0 -mt-[1px]" />
+                  <span className="text-[11px] sm:text-xs font-semibold truncate">{article.location || 'Bhopal'}</span>
                 </div>
                 <div className="flex items-center gap-1.5 shrink-0 text-slate-500">
-                  <Calendar className="w-4 h-4 shrink-0 -mt-[2px]" />
-                  <span className="text-xs font-semibold whitespace-nowrap">Published: {article.fullPublishedDate || '18 May 2025, 10:30 AM'}</span>
+                  <Calendar className="w-3.5 h-3.5 shrink-0 -mt-[1px]" />
+                  <span className="text-[11px] sm:text-xs font-semibold whitespace-nowrap">Published: {article.fullPublishedDate || '18 May 2025, 10:30 AM'}</span>
                 </div>
               </div>
             </div>
